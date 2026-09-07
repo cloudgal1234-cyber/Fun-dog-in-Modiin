@@ -248,6 +248,24 @@ img { max-width: 100%; }
   transform: rotate(-2deg);
 }
 
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+.hero-badges .badge {
+  background: #fff;
+  color: var(--grass-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 10px 18px;
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  border: 2px solid var(--sky);
+}
+
 .btn-primary {
   display: inline-block;
   text-decoration: none;
@@ -324,7 +342,7 @@ img { max-width: 100%; }
 }
 
 .cards {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -539,8 +557,12 @@ img { max-width: 100%; }
 
 /* ===================== Responsive ===================== */
 @media (max-width: 900px) {
-  .cards { grid-template-columns: 1fr; }
+  .cards { grid-template-columns: repeat(2, 1fr); }
   .feature-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .cards { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 720px) {
